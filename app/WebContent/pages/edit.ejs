@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>diary</title>
+    <link rel="stylesheet" type="text/css" href="/style.css" ">
+    <script src="/link.js"></script>
+  </head>
+  <body>
+    <div class="title">
+      EDIT DIARY
+    </div>
+
+    <form id="dummyForm">
+    <div class="list-area">
+      <div class="list-item">
+        <div>date:</div>
+        <input type="date" name="date" value="<%= date %>"/>
+      </div>
+      <div class="list-item">
+        <div>title:</div>
+        <input type="text" name="title" value="<%= title %>"/>
+      </div>
+      <div class="list-item">
+        <div>content:</div>
+        <textarea name="content" rows="20"/><%= content %></textarea>
+      </div>
+    </div>
+
+    <div class="button-area">
+      <div class="button" onClick="jumpSave();">SAVE</div>
+    </div>
+    <input type="hidden" name="id" value="<%= id %>"/>
+    <input type="hidden" name="mode" value="<%= mode %>"/>
+    </form>
+  </body>
+</html>

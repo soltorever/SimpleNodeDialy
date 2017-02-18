@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>diary</title>
+    <link rel="stylesheet" type="text/css" href="/style.css" />
+    <script src="/link.js"></script>
+  </head>
+  <body>
+    <div class="title">
+      Dialy List
+    </div>
+
+    <div class="button-area">
+      <div class="button" onClick="jumpAdd()">ADD</div>
+    </div>
+
+    <div class="list-area">
+      <% items.forEach(function (value, key) { %>
+        <div class="list-item">
+          <a href="#" onClick="jumpInfo(<%= value.id %>)"><%= value.date %>:<%= value.title %></a>
+        </div>
+      <% }); %>
+    </div>
+
+    <form id="dummyForm"/>
+  </body>
+</html>

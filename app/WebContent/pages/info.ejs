@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>diary</title>
+    <link rel="stylesheet" type="text/css" href="/style.css" ">
+    <script src="/link.js"></script>
+  </head>
+  <body>
+    <div class="title">
+      <%= date %>:<%= title %>
+    </div>
+
+    <div class="list-area">
+      <div class="list-item">
+        <%= content %>
+      </div>
+    </div>
+
+    <div class="button-area">
+      <div class="button" onClick="jumpEdit(<%= id %>);">EDIT</div>
+      <div class="button color-alert" onClick="if(confirm('Do you really want to delet?')){jumpDelete();}">DELETE</div>
+    </div>
+    <form id="dummyForm"/>
+    <input type="hidden" name="id" value="<%= id %>"/>
+  </body>
+</html>
